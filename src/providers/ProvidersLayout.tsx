@@ -2,12 +2,15 @@
 
 import { ChildrenProps } from 'src/types';
 
+import { ScreensProvider } from './ScreensProvider';
 import { ThemeProvider } from './ThemeProvider';
 
 export const ProvidersLayout = ({ children }: ChildrenProps) => {
   return (
     <>
-      <ThemeProvider>{children}</ThemeProvider>
+      <ThemeProvider>
+        <ScreensProvider>{children}</ScreensProvider>
+      </ThemeProvider>
     </>
   );
 };

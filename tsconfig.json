@@ -27,7 +27,7 @@
       "@/ui/*": ["src/components/ui/*"],
       "@/providers": ["src/providers/index"],
       "@/types": ["src/types/index"],
-      "@/styles": ["src/styles/*"],
+      "@/styles": ["src/styles/index"],
       "@/helpers": ["src/lib/helpers/index"],
       "@/services": ["src/lib/services/index"],
       "@/hooks": ["src/lib/hooks/index"]
