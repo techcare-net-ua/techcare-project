@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import { BaseLayout } from '@/components';
 import { cn } from '@/helpers';
 import { ProvidersLayout } from '@/providers';
-import { ChildrenProps } from '@/types';
+import { PropsChildren } from '@/types';
 
 import './globals.css';
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: 'Description...',
 };
 
-export default function RootLayout({ children }: ChildrenProps) {
+export default function RootLayout({ children }: PropsChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className)}>

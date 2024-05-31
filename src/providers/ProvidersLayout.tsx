@@ -1,15 +1,17 @@
 'use client';
 
-import { ChildrenProps } from 'src/types';
+import { PropsChildren } from 'src/types';
 
-import { ScreensProvider } from './ScreensProvider';
+// import { ScreensProvider } from './ScreensProvider';
 import { ThemeProvider } from './ThemeProvider';
 
-export const ProvidersLayout = ({ children }: ChildrenProps) => {
+export const ProvidersLayout = ({ children }: PropsChildren) => {
   return (
     <>
       <ThemeProvider>
-        <ScreensProvider>{children}</ScreensProvider>
+        {/* <ScreensProvider> */}
+        {children}
+        {/* </ScreensProvider> */}
       </ThemeProvider>
     </>
   );

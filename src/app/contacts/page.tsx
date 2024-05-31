@@ -1,9 +1,11 @@
+import { Container } from '@/components';
+
 export default function AboutUsPage() {
   return (
     <section>
-      <div className="container">
+      <Container>
         <h1>About Us Page</h1>
-      </div>
+      </Container>
     </section>
   );
 }

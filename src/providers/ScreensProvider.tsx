@@ -3,7 +3,7 @@ import { createContext, useContext } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 import { screens } from '@/styles';
-import { ChildrenProps, Screens } from '@/types';
+import { PropsChildren, Screens } from '@/types';
 
 interface Context {
   screen: Screens;
@@ -52,7 +52,7 @@ const getScreen = ({
   }
 };
 
-export const ScreensProvider = ({ children }: ChildrenProps) => {
+export const ScreensProvider = ({ children }: PropsChildren) => {
   const mobile = useMediaQuery({
     maxWidth: int(screens.sm) - 0.02,
   });

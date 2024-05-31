@@ -1,7 +1,7 @@
 import { Footer, Header, Main } from '@/components';
-import { ChildrenProps } from '@/types';
+import { PropsChildren } from '@/types';
 
-export const BaseLayout = ({ children }: ChildrenProps) => {
+export const BaseLayout = ({ children }: PropsChildren) => {
   return (
     <div className="grid min-h-screen grid-cols-base-layout grid-rows-base-layout grid-areas-base-layout">
       <Header />
