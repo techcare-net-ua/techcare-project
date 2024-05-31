@@ -17,10 +17,10 @@ export const Container = ({
     <div
       style={style}
       className={cn(
-        'container relative py-4 space-y-4',
+        '__test container relative space-y-4 py-4',
         pxDisable && 'px-0',
         type === 'single-col-grid' && 'grid',
-        type === 'flex-row' && 'flex flex-wrap space-x-0 space-y-0 gap-4',
+        type === 'flex-row' && 'flex flex-wrap gap-4 space-x-0 space-y-0',
         className,
       )}
     >

@@ -104,12 +104,15 @@ const config: Config = {
 
       gridTemplateAreas: {
         'base-layout': ['header', 'main', 'footer'],
+        dashboard: ['aside sections'],
       },
       gridTemplateColumns: {
         'base-layout': '1fr',
+        dashboard: 'auto 1fr',
       },
       gridTemplateRows: {
         'base-layout': 'auto 1fr auto',
+        dashboard: 'auto',
       },
     },
   },

@@ -1,14 +1,12 @@
-import { Footer, Header, Main } from '@/components';
+import { Footer, Header } from '@/components';
 import { PropsChildren } from '@/types';
 
-export const BaseLayout = ({ children }: PropsChildren) => {
+export default function Layout({ children }: PropsChildren) {
   return (
     <div className="grid min-h-screen grid-cols-base-layout grid-rows-base-layout grid-areas-base-layout">
       <Header />
-      <Main>{children}</Main>
+      <main className="grid-in-main">{children}</main>
       <Footer />
     </div>
   );
-};
-
-export default BaseLayout;
+}

@@ -1,10 +1,10 @@
 import { Container } from '@/components';
 
-export default function AboutUsPage() {
+export default function Page() {
   return (
     <section>
       <Container>
-        <h1>About Us Page</h1>
+        <h2>User-control</h2>
       </Container>
     </section>
   );

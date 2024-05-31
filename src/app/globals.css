@@ -52,17 +52,21 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   h1 {
-    @apply scroll-m-20 tracking-tight text-4xl font-extrabold;
+    @apply scroll-m-8 tracking-tight text-4xl font-extrabold;
   }
   h2 {
-    @apply scroll-m-20 tracking-tight text-3xl font-semibold;
+    @apply scroll-m-8 tracking-tight text-3xl font-semibold;
   }
   h3 {
-    @apply scroll-m-20 tracking-tight text-2xl font-semibold;
+    @apply scroll-m-8 tracking-tight text-2xl font-semibold;
   }
   h4 {
-    @apply scroll-m-20 tracking-tight text-xl font-semibold;
+    @apply scroll-m-8 tracking-tight text-xl font-semibold;
   }
 
   p {
