@@ -18,6 +18,6 @@ export const navRoutes: NavRoute[] = [
     id: 'contacts',
     href: '/contacts',
     title: 'contacts',
-    startScreen: Screens.MOBILE,
+    startScreen: Screens.SM,
   },
 ];
