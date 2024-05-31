@@ -1,5 +1,5 @@
-import { ChildrenProps } from '@/types';
+import { PropsChildren } from '@/types';
 
-export const Main = ({ children }: ChildrenProps) => {
+export const Main = ({ children }: PropsChildren) => {
   return <main className="grid-in-main">{children}</main>;
 };

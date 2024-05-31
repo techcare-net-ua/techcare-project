@@ -13,6 +13,13 @@ const config: Config = {
     supports: {
       grid: 'display: grid',
     },
+    screens: {
+      sm: '480px',
+      md: '768px',
+      lg: '976px',
+      xl: '1440px',
+      print: { raw: 'print' },
+    },
     container: {
       center: true,
       padding: {

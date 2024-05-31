@@ -4,7 +4,7 @@ export default function Page() {
   return (
     <section>
       <Container>
-        <h1>Contacts Page</h1>
+        <h1>Services Page</h1>
       </Container>
     </section>
   );
