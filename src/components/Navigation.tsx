@@ -5,10 +5,10 @@ import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import * as nav from '@/components/ui/navigation-menu';
 import { navRoutes } from '@/configs';
 import { cn } from '@/helpers';
 import { Screens } from '@/types';
-import * as nav from '@/ui/navigation-menu';
 
 const getDisplayClasses = (screen: Screens) =>
   cn({
