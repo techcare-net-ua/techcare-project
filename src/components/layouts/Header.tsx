@@ -18,7 +18,9 @@ export const Header = () => {
             <Menu strokeWidth={1} />
             <span className="sr-only">Toggle mobile menu</span>
           </Button>
-          <ThemeSwitcher />
+          <div className="hidden sm:block">
+            <ThemeSwitcher />
+          </div>
           <Button size="default" asChild>
             <Link href="/profile">Sign in</Link>
           </Button>
