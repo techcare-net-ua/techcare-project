@@ -24,6 +24,7 @@
     "baseUrl": ".",
     "paths": {
       "@/components": ["src/components/index"],
+      "@/components/*": ["src/components/*"],
       "@/ui/*": ["src/components/ui/*"],
       "@/providers": ["src/providers/index"],
       "@/types": ["src/types/index"],
