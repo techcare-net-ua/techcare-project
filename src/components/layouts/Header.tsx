@@ -2,7 +2,7 @@ import { Menu } from 'lucide-react';
 import Link from 'next/link';
 
 import { Logo, Navigation } from '@/components';
-import { Button } from '@/ui/button';
+import { Button } from '@/components/ui/button';
 
 import { ThemeSwitcher } from '../ThemeSwitcher';
 

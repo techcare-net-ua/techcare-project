@@ -2,8 +2,8 @@
 
 import { useEffect } from 'react';
 
+import { Button } from '@/components/ui/button';
 import { PropsError } from '@/types';
-import { Button } from '@/ui/button';
 
 export default function Error({ error, reset }: PropsError) {
   useEffect(() => {

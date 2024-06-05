@@ -2,8 +2,9 @@
 
 import { useEffect } from 'react';
 
+import { Container } from '@/components';
+import { Button } from '@/components/ui/button';
 import { PropsError } from '@/types';
-import { Button } from '@/ui/button';
 
 export default function Error({ error, reset }: PropsError) {
   useEffect(() => {
@@ -11,9 +12,9 @@ export default function Error({ error, reset }: PropsError) {
   }, [error]);
 
   return (
-    <div>
+    <Container className="container">
       <h2>Something went wrong!</h2>
       <Button onClick={() => reset()}>Try again</Button>
-    </div>
+    </Container>
   );
 }
