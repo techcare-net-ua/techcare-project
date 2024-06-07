@@ -57,16 +57,16 @@
   }
 
   h1 {
-    @apply scroll-m-8 tracking-tight text-4xl font-extrabold;
+    @apply scroll-m-8 text-4xl font-extrabold tracking-tight;
   }
   h2 {
-    @apply scroll-m-8 tracking-tight text-3xl font-semibold;
+    @apply scroll-m-8 text-3xl font-semibold tracking-tight;
   }
   h3 {
-    @apply scroll-m-8 tracking-tight text-2xl font-semibold;
+    @apply scroll-m-8 text-2xl font-semibold tracking-tight;
   }
   h4 {
-    @apply scroll-m-8 tracking-tight text-xl font-semibold;
+    @apply scroll-m-8 text-xl font-semibold tracking-tight;
   }
 
   p {
@@ -79,7 +79,7 @@
 }
 
 @layer utilities {
-  .__test {
+  .__test2 {
     @apply border border-test;
   }
 }
