@@ -79,7 +79,7 @@
 }
 
 @layer utilities {
-  .__test2 {
+  .__test {
     @apply border border-test;
   }
 }
