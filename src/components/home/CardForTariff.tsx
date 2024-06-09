@@ -65,7 +65,7 @@ export function CardForTariff({ className, ...props }: CardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="h-12 w-full rounded-[100px] py-5 text-2xl font-semibold">
+        <Button className="h-12 w-full py-5 text-2xl font-semibold">
           Get Started
         </Button>
       </CardFooter>

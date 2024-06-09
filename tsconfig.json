@@ -32,7 +32,8 @@
       "@/helpers": ["src/lib/helpers/index"],
       "@/services": ["src/lib/services/index"],
       "@/configs": ["src/lib/configs/index"],
-      "@/hooks": ["src/lib/hooks/index"]
+      "@/hooks": ["src/lib/hooks/index"],
+      "@/images/*": ["public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
