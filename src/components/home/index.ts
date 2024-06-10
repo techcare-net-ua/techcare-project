@@ -1,3 +1,3 @@
 export * from './ExampleSection';
 export * from './ServicesSection';
-export * from './Tariffs';
+export * from './TariffsSection';
