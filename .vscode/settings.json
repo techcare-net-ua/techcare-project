@@ -1,3 +1,25 @@
 {
-  "cSpell.words": ["lucide", "techcare"]
+  "cSpell.words": ["lucide", "techcare"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSave": "onFocusChange",
+  "tailwindCSS.experimental.classRegex": [
+    ["Classes \\=([^;]*);", "'([^']*)'"],
+    ["Classes \\=([^;]*);", "\"([^\"]*)\""],
+    ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"],
+    ["tw \\=([^;]*);", "'([^']*)'"],
+    ["tw \\=([^;]*);", "\"([^\"]*)\""],
+    ["tw \\=([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+  "node-module-intellisense.fileModuleExtensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".d.ts",
+    ".tsx",
+    ".vue",
+    ".json"
+  ]
 }
