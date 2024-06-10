@@ -1,10 +1,11 @@
 // Home Page
 
-import { ExampleSection } from '@/components/home';
+import { ExampleSection, Hero } from '@/components/home';
 
 export default function Page() {
   return (
     <>
+      <Hero />
       <ExampleSection />
     </>
   );
