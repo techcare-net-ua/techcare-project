@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
         <div className="absolute bottom-0 left-0 hidden h-20 w-screen bg-gradient-to-t from-background to-transparent dark:block"></div>
       </div>
       <Container
-        className="flex flex-col items-center pb-5 pt-20 md:flex-row md:pt-28 xl:justify-between xl:px-16 xl:pt-32
+        className="animate-show-up flex flex-col items-center pb-5 pt-20 md:flex-row md:pt-28 xl:justify-between xl:px-16 xl:pt-32
       "
       >
         <div className="space-y-10 pb-10 md:space-y-16 md:pr-4 xl:w-[800px]">
