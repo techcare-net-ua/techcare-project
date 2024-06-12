@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, ReactNode, useState } from 'react';
+import AutoHeight from 'embla-carousel-auto-height';
 
 import {
   Carousel,
@@ -10,13 +11,14 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { DotButton, useDotButton } from '@/components/ui/carousel-dot-buttons';
+import { cn } from '@/helpers';
 
 export const Swiper: FC<{
   children: ReactNode;
 }> = ({ children }) => {
   const [api, setApi] = useState<CarouselApi>();
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(api);
-  
+
   return (
     <>
       <Carousel
@@ -24,21 +26,32 @@ export const Swiper: FC<{
         opts={{
           loop: false,
         }}
+        plugins={[
+          AutoHeight({
+            breakpoints: {
+              '(min-width: 768px)': { active: false },
+            },
+          }),
+        ]}
       >
-        <CarouselContent className="-ml-7">{children}</CarouselContent>
-        <CarouselPrevious className="-left-4" />
-        <CarouselNext className="-right-4" />
+        <CarouselContent className="-ml-7 transition-[height] duration-500">
+          {children}
+        </CarouselContent>
+        <CarouselPrevious className="-left-4 hidden lg:block" />
+        <CarouselNext className="-right-4 hidden lg:block" />
       </Carousel>
       <div className="grid grid-flow-col justify-center gap-x-2">
-        {scrollSnaps.map((_, index) => (
-          <DotButton
-            key={index}
-            onClick={() => onDotButtonClick(index)}
-            className={'h-6 w-6 rounded-full border-2 border-border'.concat(
-              index === selectedIndex ? ' border-accent-foreground' : '',
-            )}
-          />
-        ))}
+        {scrollSnaps.map((_, index) => {
+          return (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={cn('h-6 w-6 rounded-full border-2 border-border',
+                index === selectedIndex && 'border-accent-foreground',
+              )}
+            />
+          );
+        })}
       </div>
     </>
   );

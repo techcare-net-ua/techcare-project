@@ -12,7 +12,7 @@ export const Tariffs = () => {
         {dataForTariffs.map(data => (
           <CarouselItem
             key={data.id}
-            className="basis-auto pl-7"
+            className="h-fit basis-full pl-7 md:basis-auto"
             // basis-1/2 md:basis-1/2 lg:basis-1/2
           >
             <CardForTariff data={data} className="mx-auto my-0" />

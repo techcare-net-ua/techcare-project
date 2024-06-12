@@ -6,8 +6,8 @@ export default function Page() {
   return (
     <>
       <Tariffs />
-      {/* <ServicesSection />
-      <ExampleSection /> */}
+      <ServicesSection />
+      <ExampleSection />
     </>
   );
 }
