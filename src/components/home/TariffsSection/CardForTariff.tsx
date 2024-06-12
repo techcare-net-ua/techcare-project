@@ -19,7 +19,7 @@ type CardProps = React.ComponentProps<typeof Card> & { data: Tariff };
 export function CardForTariff({ className, data, ...props }: CardProps) {
   return (
     <Card
-      className={cn('w-full max-w-[450px] xl:max-w-[510px]', className)}
+      className={cn('w-full max-w-[450px] xl:max-w-[670px]', className)}
       {...props}
     >
       <CardHeader className="items-start space-y-5 px-8 pb-8 pt-16 xl:space-y-6 xl:px-12 xl:pb-12">
