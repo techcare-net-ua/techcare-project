@@ -46,7 +46,8 @@ export const Swiper: FC<{
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={cn('h-6 w-6 rounded-full border-2 border-border',
+              className={cn(
+                'h-6 w-6 rounded-full border-2 border-border',
                 index === selectedIndex && 'border-accent-foreground',
               )}
             />
