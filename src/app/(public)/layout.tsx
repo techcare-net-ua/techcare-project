@@ -8,5 +8,5 @@ export default function Layout({ children }: PropsChildren) {
       <main className="grid-in-main">{children}</main>
       <Footer />
     </div>
-  ); 
+  );
 }
