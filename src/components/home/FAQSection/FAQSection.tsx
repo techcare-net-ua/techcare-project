@@ -42,7 +42,7 @@ export const FAQSection = () => {
             {firstHalf.map(({ id, title, description }) => (
               <Accordion key={id} type="single" collapsible className="w-full">
                 <AccordionItem className="mb-3 border" value={id}>
-                  <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary">
+                  <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
                     {title}
                   </AccordionTrigger>
                   <AccordionContent className="px-4">
@@ -62,8 +62,8 @@ export const FAQSection = () => {
                   className="w-full"
                 >
                   <AccordionItem className="mb-3 border" value={id}>
-                    <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary">
-                      {title}
+                    <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
+                      <span>{title}</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-4">
                       {description}

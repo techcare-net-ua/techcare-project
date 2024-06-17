@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { AccordionDemo, Container } from '@/components';
+import { Container } from '@/components';
 
 export const ExampleSection = () => {
   return (
