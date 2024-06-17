@@ -43,7 +43,7 @@ export const FAQSection = () => {
               <Accordion key={id} type="single" collapsible className="w-full">
                 <AccordionItem className="mb-3 border" value={id}>
                   <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
-                    {title}
+                    <span>{title}</span>
                   </AccordionTrigger>
                   <AccordionContent className="px-4">
                     {description}
