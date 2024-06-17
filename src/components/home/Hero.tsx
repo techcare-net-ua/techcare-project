@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
         <div className="absolute bottom-0 left-0 hidden h-20 w-screen bg-gradient-to-t from-background to-transparent dark:block"></div>
       </div>
       <Container
-        className="animate-show-up flex flex-col items-center pb-5 pt-20 md:flex-row md:pt-28 xl:justify-between xl:px-16 xl:pt-32
+        className="flex animate-show-up flex-col items-center pb-5 pt-20 md:flex-row md:pt-28 xl:justify-between xl:px-16 xl:pt-32
       "
       >
         <div className="space-y-10 pb-10 md:space-y-16 md:pr-4 xl:w-[800px]">
@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
             Techcare - надійний провідник у світ інформаційних технологій
           </h1>
           <p
-            className="mx-auto w-[400px] text-primary-foreground md:mx-0 lg:w-full xl:w-full xl:text-xl 
+            className="mx-auto max-w-[400px] text-primary-foreground md:mx-0 lg:w-full xl:w-full xl:text-xl 
           dark:text-foreground"
           >
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
             culpa tempora dolores voluptatem.
           </p>
         </div>
-        <Card className="mt-0 w-[400px] rounded-lg opacity-80 md:max-w-[400px]  xl:w-[500px]">
+        <Card className="mt-0 max-w-[400px] rounded-lg opacity-80 md:max-w-[400px]  xl:w-[500px]">
           <CardHeader className="xl:space-y-3">
             <CardTitle className="xl:text-3xl">
               Потрібна допомога системного адміністратора?
