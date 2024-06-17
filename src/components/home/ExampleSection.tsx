@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { AccordionDemo, Container } from '@/components';
+import { Container } from '@/components';
 
 export const ExampleSection = () => {
   return (
@@ -28,7 +28,6 @@ export const ExampleSection = () => {
           error.
         </p>
         <h2 id="accordion">Accordion</h2>
-        <AccordionDemo />
         <h2 id="lorem">Lorem</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
