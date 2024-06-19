@@ -1,9 +1,9 @@
-import { Menu } from 'lucide-react';
 import Link from 'next/link';
 
 import { Logo, Navigation } from '@/components';
 import { Button } from '@/components/ui/button';
 
+import { MobileMenu } from '../MobileMenu';
 import { ThemeSwitcher } from '../ThemeSwitcher';
 
 export const Header = () => {
@@ -14,10 +14,7 @@ export const Header = () => {
 
         <div className="flex items-center gap-4">
           <Navigation />
-          <Button variant="outline" size="icon">
-            <Menu strokeWidth={1} />
-            <span className="sr-only">Toggle mobile menu</span>
-          </Button>
+          <MobileMenu />
           <div className="hidden sm:block">
             <ThemeSwitcher />
           </div>
