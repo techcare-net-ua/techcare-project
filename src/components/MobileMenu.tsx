@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
-import { usePathname } from 'next/navigation';
 
+import { Separator } from '@/components';
 import * as sheet from '@/components/ui/sheet';
 
 import { MobileNav } from './MobileNav';
@@ -11,7 +11,7 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
+
 
   return (
     <>
@@ -20,11 +20,11 @@ export const MobileMenu = () => {
           <Menu strokeWidth={1} />
           <span className="sr-only">Toggle mobile menu</span>
         </sheet.SheetTrigger>
-        <sheet.SheetContent side={'top'} className='flex flex-col gap-6'>
-          <MobileNav pathname={pathname} closeMenu={() => setOpen(false)} />
-            <div className='border border-solid border-border sm:hidden'></div>
-          <sheet.SheetFooter className="sm:hidden items-center">
-              <ThemeSwitcher />
+        <sheet.SheetContent side={'top'} className="flex flex-col gap-6">
+          <MobileNav closeMenu={() => setOpen(false)} />
+          <Separator />
+          <sheet.SheetFooter className="items-center sm:justify-center">
+            <ThemeSwitcher />
           </sheet.SheetFooter>
         </sheet.SheetContent>
       </sheet.Sheet>

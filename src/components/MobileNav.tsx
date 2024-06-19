@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import * as nav from '@/components/ui/navigation-menu';
 import { navRoutes } from '@/configs';
-import { cn } from '@/helpers';
 import { Screens } from '@/types';
 
 const homeOptions = {
@@ -13,28 +13,21 @@ const homeOptions = {
   startScreen: Screens.MD,
 };
 
-const getDisplayClasses = (screen: Screens) =>
-  cn({
-    ['block sm:hidden']: screen === Screens.SM,
-    ['block md:hidden']: screen === Screens.MD,
-  });
-
 interface IProps {
-  pathname: string;
   closeMenu: () => void;
 }
 
-export const MobileNav = ({ pathname, closeMenu }: IProps) => {
+export const MobileNav = ({ closeMenu }: IProps) => {
+  const pathname = usePathname();
   const isActive = (src: string) => pathname.endsWith(src);
 
   return (
     <nav.NavigationMenu className="max-w-none grow-0">
       <nav.NavigationMenuList className="flex-col items-start space-x-0">
-        {[homeOptions, ...navRoutes].map(({ id, href, title, startScreen }) => {
+        {[homeOptions, ...navRoutes].map(({ id, href, title }) => {
           return (
             <nav.NavigationMenuItem
               key={id}
-              className={getDisplayClasses(startScreen)}
             >
               <Link href={href} legacyBehavior passHref>
                 <nav.NavigationMenuLink
