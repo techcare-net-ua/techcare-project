@@ -1,6 +1,6 @@
 import DOMPurify from 'isomorphic-dompurify';
 
-import { Container } from '@/components/Container';
+import { Container, Separator } from '@/components';
 
 import { content } from './content';
 
@@ -15,14 +15,15 @@ export const AdvantagesSection = () => {
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(convertToB(content.title)),
           }}
-          className="[&_b]:to-primary_add text-center text-3xl font-semibold [&_b]:bg-gradient-to-l [&_b]:from-primary [&_b]:bg-clip-text [&_b]:not-italic [&_b]:text-transparent"
+          className="text-center text-3xl font-semibold [&_b]:bg-gradient-to-l [&_b]:from-primary [&_b]:to-primary_add [&_b]:bg-clip-text [&_b]:not-italic [&_b]:text-transparent"
         />
+        <Separator />
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {content.base.map(({ id, description, title }) => (
             <div
               key={id}
-              className="dark:from-primary-bg bg-primary-bg rounded-lg p-6 dark:bg-gradient-to-br dark:to-primary"
+              className="rounded-lg bg-primary-bg p-6 dark:bg-gradient-to-br dark:from-primary-bg dark:to-primary"
             >
               <h2 className="text-xl font-semibold">{title}</h2>
               <p className="[] mt-2">{description}</p>

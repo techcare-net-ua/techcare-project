@@ -2,7 +2,7 @@
 
 import {
   AdvantagesSection,
-  ExampleSection,
+  // ExampleSection,
   FAQSection,
   Hero,
   ServicesSection,
