@@ -23,6 +23,9 @@
   --input: 240 5.9% 90%;
   --ring: 142.1 76.2% 36.3%;
   --radius: 0.5rem;
+  /* custom */
+  --primary-add: 142.1 76.2% 30.3%;
+  --primary-bg: 142.1 76.2% 90%;
 }
 
 .dark {
@@ -45,6 +48,9 @@
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
   --ring: 142.4 71.8% 29.2%;
+  /* custom */
+  --primary-add: 142.1 76.2% 70.3%;
+  --primary-bg: 142.1 70.6% 8%;
 }
 
 @layer base {
@@ -57,16 +63,16 @@
   }
 
   h1 {
-    @apply scroll-m-8 text-4xl font-extrabold tracking-tight;
+    @apply scroll-m-8 text-4xl font-extrabold tracking-normal;
   }
   h2 {
-    @apply scroll-m-8 text-3xl font-semibold tracking-tight;
+    @apply scroll-m-8 text-3xl font-semibold tracking-normal;
   }
   h3 {
-    @apply scroll-m-8 text-2xl font-semibold tracking-tight;
+    @apply scroll-m-8 text-2xl font-semibold tracking-normal;
   }
   h4 {
-    @apply scroll-m-8 text-xl font-semibold tracking-tight;
+    @apply scroll-m-8 text-xl font-semibold tracking-normal;
   }
 
   p {

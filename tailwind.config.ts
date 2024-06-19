@@ -66,6 +66,11 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        primary_add: {
+          DEFAULT: 'hsl(var(--primary-add))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        ['primary-bg']: 'hsl(var(--primary-bg))',
       },
       borderRadius: {
         xl: `calc(var(--radius) + 4px)`,

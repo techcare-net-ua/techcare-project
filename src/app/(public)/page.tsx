@@ -1,6 +1,7 @@
 // Home Page
 
 import {
+  AdvantagesSection,
   ExampleSection,
   FAQSection,
   Hero,
@@ -11,9 +12,10 @@ export default function Page() {
   return (
     <>
       <Hero />
+      <AdvantagesSection />
       <ServicesSection />
       <FAQSection />
-      <ExampleSection />
+      {/* <ExampleSection /> */}
     </>
   );
 }
