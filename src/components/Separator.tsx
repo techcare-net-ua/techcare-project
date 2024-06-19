@@ -1,4 +1,4 @@
-import { cn } from "@/helpers";
+import { cn } from '@/helpers';
 
 export const Separator = ({ className }: { className?: string }) => {
   return (

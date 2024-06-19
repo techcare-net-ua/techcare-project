@@ -12,7 +12,6 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 export const MobileMenu = () => {
   const [open, setOpen] = useState(false);
 
-
   return (
     <>
       <sheet.Sheet open={open} onOpenChange={setOpen}>

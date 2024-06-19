@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Container, InViewSpring } from '@/components';
+import { Container, InViewSpring, Separator } from '@/components';
 import { Button } from '@/components/ui/button';
 import { ROUTES } from '@/configs';
 import { cn, transformIndexToCounter } from '@/helpers';
@@ -12,7 +12,8 @@ export const ServicesSection = () => {
   return (
     <section>
       <Container pxDisable className="relative space-y-8 pb-8 pt-8 text-center">
-        <h2 className="px-4 uppercase">{content.title}</h2>
+        <h2 className="px-4">{content.title}</h2>
+        <Separator />
         <ul className="md:space-y-1">
           {content.servicesData.map(
             ({ title, id, points, description, src }, index) => (
@@ -85,6 +86,7 @@ export const ServicesSection = () => {
         <Button asChild className="mx-auto">
           <Link href={ROUTES.SERVICES.PATH}>{content.goToAllSevices}</Link>
         </Button>
+        <Separator />
       </Container>
     </section>
   );

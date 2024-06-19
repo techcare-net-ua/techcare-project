@@ -1,30 +1,32 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import { Container } from '@/components/Container';
+import { Container, Separator } from '@/components';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { screens } from '@/styles';
 
-import { FAQData } from './content';
+import { content } from './content';
+
+const splitArray = <T,>(arr: T[]): [T[], T[]] => {
+  const mid = Math.ceil(arr.length / 2);
+  const firstHalf = arr.slice(0, mid);
+  const secondHalf = arr.slice(mid);
+  return [firstHalf, secondHalf];
+};
 
 export const FAQSection = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  const splitArray = <T,>(arr: T[]): [T[], T[]] => {
-    const mid = Math.ceil(arr.length / 2);
-    const firstHalf = arr.slice(0, mid);
-    const secondHalf = arr.slice(mid);
-    return [firstHalf, secondHalf];
-  };
-
-  const [firstHalf, secondHalf] = splitArray(FAQData);
+  const [firstHalf, secondHalf] = splitArray(content.FAQData);
 
   useEffect(() => {
-    const handleResize = () => setIsLargeScreen(window.innerWidth > 975);
+    const handleResize = () =>
+      setIsLargeScreen(window.innerWidth > parseInt(screens.lg) - 1);
 
     window.addEventListener('resize', handleResize);
     handleResize();
@@ -33,10 +35,8 @@ export const FAQSection = () => {
   return (
     <section>
       <Container className="space-y-0 pb-8 pt-0">
-        <h2 className="pb-4 text-center uppercase lg:pb-8">
-          Найчастіші запитання:
-        </h2>
-        <div className="h-[1px] w-full bg-gradient-to-r from-background via-foreground to-background"></div>
+        <h2 className="pb-4 text-center lg:pb-8">{content.title}:</h2>
+        <Separator />
         <div className="pt-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:pt-8">
           <div>
             {firstHalf.map(({ id, title, description }) => (
