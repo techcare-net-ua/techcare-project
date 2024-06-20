@@ -2,10 +2,10 @@
 
 import {
   AdvantagesSection,
-  // ExampleSection,
   FAQSection,
   Hero,
   ServicesSection,
+  Tariffs,
 } from '@/components/home';
 
 export default function Page() {
@@ -13,9 +13,9 @@ export default function Page() {
     <>
       <Hero />
       <AdvantagesSection />
+      <Tariffs />
       <ServicesSection />
       <FAQSection />
-      {/* <ExampleSection /> */}
     </>
   );
 }
