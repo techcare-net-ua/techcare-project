@@ -5,16 +5,18 @@ import {
   FAQSection,
   Hero,
   ServicesSection,
-  Tariffs,
+  TariffsSection,
 } from '@/components/home';
+// import Slider from '@/components/home/Slider/Slider';
 
 export default function Page() {
   return (
     <>
       <Hero />
       <AdvantagesSection />
-      <Tariffs />
       <ServicesSection />
+      <TariffsSection />
+      {/* <Slider /> */}
       <FAQSection />
     </>
   );

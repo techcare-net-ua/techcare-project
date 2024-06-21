@@ -15,7 +15,7 @@ export const Header = () => {
 
           <div className="flex items-center gap-4">
             <Navigation />
-
+            <MobileMenu />
             <div className="hidden sm:block">
               <ThemeSwitcher />
             </div>
@@ -25,7 +25,6 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <MobileMenu />
     </>
   );
 };

@@ -10,7 +10,7 @@ const convertToB = (text: string): string =>
 export const AdvantagesSection = () => {
   return (
     <section>
-      <Container className="relative space-y-6 pb-8 pt-12">
+      <Container className="relative space-y-8 pb-8 pt-8">
         <h2
           dangerouslySetInnerHTML={{
             __html: DOMPurify.sanitize(convertToB(content.title)),

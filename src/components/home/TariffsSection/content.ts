@@ -1,4 +1,4 @@
-export interface Tariff {
+interface Tariff {
   id: number;
   badge: string;
   isFree: boolean;
@@ -8,7 +8,7 @@ export interface Tariff {
   description: { item: string }[];
 }
 
-export const tariffsData: Tariff[] = [
+const tariffsData: Tariff[] = [
   {
     id: 1,
     badge: 'badge',
@@ -113,3 +113,10 @@ export const tariffsData: Tariff[] = [
     ],
   },
 ];
+
+const title = 'Тарифи на послуги';
+
+export const content = {
+  title,
+  tariffsData,
+};
