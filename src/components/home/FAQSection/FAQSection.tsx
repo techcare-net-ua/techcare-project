@@ -21,7 +21,7 @@ export const FAQSection = () => {
 
   return (
     <section>
-      <Container className="space-y-0 pb-8 pt-0">
+      <Container className="space-y-0 pb-8 pt-8">
         <h2 className="pb-4 text-center lg:pb-8">{content.title}:</h2>
         <Separator />
         <div className="pt-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:pt-8">

@@ -10,8 +10,8 @@ export const Header = () => {
   return (
     <>
       <header className="border-b border-b-border grid-in-header">
-        <div className="__test container flex items-center justify-between gap-4 py-2">
-          <Logo height={50} width={170} />
+        <div className="container flex items-center justify-between gap-4 py-2">
+          <Logo />
 
           <div className="flex items-center gap-4">
             <Navigation />
