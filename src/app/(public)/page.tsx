@@ -7,7 +7,6 @@ import {
   ServicesSection,
   TariffsSection,
 } from '@/components/home';
-// import Slider from '@/components/home/Slider/Slider';
 
 export default function Page() {
   return (
@@ -16,7 +15,6 @@ export default function Page() {
       <AdvantagesSection />
       <ServicesSection />
       <TariffsSection />
-      {/* <Slider /> */}
       <FAQSection />
     </>
   );
