@@ -10,12 +10,12 @@ export const Header = () => {
   return (
     <>
       <header className="border-b border-b-border grid-in-header">
-        <div className="__test container flex items-center justify-between gap-4 py-2">
+        <div className="container flex items-center justify-between gap-4 py-2">
           <Logo />
 
           <div className="flex items-center gap-4">
             <Navigation />
-
+            <MobileMenu />
             <div className="hidden sm:block">
               <ThemeSwitcher />
             </div>
@@ -25,7 +25,6 @@ export const Header = () => {
           </div>
         </div>
       </header>
-      <MobileMenu />
     </>
   );
 };

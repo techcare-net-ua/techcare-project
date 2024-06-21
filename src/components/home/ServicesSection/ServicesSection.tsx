@@ -12,7 +12,7 @@ export const ServicesSection = () => {
   return (
     <section>
       <Container pxDisable className="relative space-y-8 pb-8 pt-8 text-center">
-        <h2 className="px-4">{content.title}</h2>
+        <h2>{content.title}</h2>
         <Separator />
         <ul className="md:space-y-1">
           {content.servicesData.map(
@@ -86,7 +86,6 @@ export const ServicesSection = () => {
         <Button asChild className="mx-auto">
           <Link href={ROUTES.SERVICES.PATH}>{content.goToAllSevices}</Link>
         </Button>
-        <Separator />
       </Container>
     </section>
   );
