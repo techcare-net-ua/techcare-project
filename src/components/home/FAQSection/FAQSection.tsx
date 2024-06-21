@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import { Container } from '@/components/Container';
+import { Container } from '@/components';
 import {
   Accordion,
   AccordionContent,
@@ -12,8 +12,6 @@ import {
 import { FAQData } from './content';
 
 export const FAQSection = () => {
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
   const splitArray = <T,>(arr: T[]): [T[], T[]] => {
     const mid = Math.ceil(arr.length / 2);
     const firstHalf = arr.slice(0, mid);
@@ -22,13 +20,6 @@ export const FAQSection = () => {
   };
 
   const [firstHalf, secondHalf] = splitArray(FAQData);
-
-  useEffect(() => {
-    const handleResize = () => setIsLargeScreen(window.innerWidth > 975);
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-  }, []);
 
   return (
     <section>
@@ -52,25 +43,19 @@ export const FAQSection = () => {
               </Accordion>
             ))}
           </div>
-          <div>
-            {isLargeScreen &&
-              secondHalf.map(({ id, title, description }) => (
-                <Accordion
-                  key={id}
-                  type="single"
-                  collapsible
-                  className="w-full"
-                >
-                  <AccordionItem className="mb-3 border" value={id}>
-                    <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
-                      <span>{title}</span>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-4">
-                      {description}
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              ))}
+          <div className="hidden lg:block">
+            {secondHalf.map(({ id, title, description }) => (
+              <Accordion key={id} type="single" collapsible className="w-full">
+                <AccordionItem className="mb-3 border" value={id}>
+                  <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
+                    <span>{title}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4">
+                    {description}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ))}
           </div>
         </div>
       </Container>

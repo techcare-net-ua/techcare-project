@@ -1,7 +1,12 @@
-const TechCarelogo = () => {
+type Size = {
+  width: number;
+  height: number;
+};
+
+const TechCarelogo = ({ width, height }: Size) => {
   return (
     <>
-      <svg width={170} height={50} viewBox="0 0 990.43 198.04">
+      <svg width={width} height={height} viewBox="0 0 990.43 198.04">
         <path
           className="fill-primary"
           d="M113.93,500.55a9.75,9.75,0,1,1-9.74-9.74A9.76,9.76,0,0,1,113.93,500.55Z"

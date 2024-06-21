@@ -2,10 +2,15 @@ import Link from 'next/link';
 
 import TechCarelogo from './TechCarelogo';
 
-export const Logo = () => {
+type Size = {
+  width: number;
+  height: number;
+};
+
+export const Logo = ({ width, height }: Size) => {
   return (
-    <Link href="/" className="font-semibold uppercase">
-      <TechCarelogo />
+    <Link href="/">
+      <TechCarelogo width={width} height={height} />
     </Link>
   );
 };
