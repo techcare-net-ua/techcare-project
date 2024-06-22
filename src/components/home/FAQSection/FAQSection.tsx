@@ -1,4 +1,3 @@
-'use client';
 import { Container, Separator } from '@/components';
 import {
   Accordion,
@@ -20,7 +19,7 @@ export const FAQSection = () => {
   const [firstHalf, secondHalf] = splitArray(content.FAQData);
 
   return (
-    <section>
+    <section id="FAQSection">
       <Container className="space-y-0 pb-8 pt-8">
         <h2 className="pb-4 text-center lg:pb-8">{content.title}:</h2>
         <Separator />

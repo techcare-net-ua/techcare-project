@@ -9,7 +9,7 @@ const convertToB = (text: string): string =>
 
 export const AdvantagesSection = () => {
   return (
-    <section>
+    <section id="AdvantagesSection">
       <Container className="relative space-y-8 pb-8 pt-8">
         <h2
           dangerouslySetInnerHTML={{

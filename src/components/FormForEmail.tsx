@@ -15,18 +15,19 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+import { cn } from '@/helpers';
 
 const FormSchema = z.object({
-  username: z.string().min(2, {
-    message: 'Username must be at least 2 characters.',
+  email: z.string().email({
+    message: 'Невірний формат електронної пошти.',
   }),
 });
 
-export function FormForEmail() {
+export function FormForEmail({ className }: { className?: string }) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: '',
+      email: '',
     },
   });
 
@@ -36,24 +37,27 @@ export function FormForEmail() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className={cn('w-2/3 space-y-6', className)}
+      >
         <FormField
           control={form.control}
-          name="username"
+          name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Username</FormLabel>
+              <FormLabel>Email</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input placeholder="Ваша електронна адреса" {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                Вкажіть Вашу пошту аби завжди отримувати актуальні новини.
               </FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Надіслати</Button>
       </form>
     </Form>
   );
