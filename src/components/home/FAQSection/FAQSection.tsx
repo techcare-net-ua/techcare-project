@@ -1,4 +1,4 @@
-import { Container, Separator } from '@/components';
+import { Container, InViewSpring, Separator } from '@/components';
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +23,7 @@ export const FAQSection = () => {
       <Container className="space-y-0 pb-8 pt-8">
         <h2 className="pb-4 text-center lg:pb-8">{content.title}:</h2>
         <Separator />
-        <div className="pt-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:pt-8">
+        <InViewSpring className="pt-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:pt-8">
           <div>
             {firstHalf.map(({ id, title, description }) => (
               <Accordion key={id} type="single" collapsible className="w-full">
@@ -52,7 +52,7 @@ export const FAQSection = () => {
               </Accordion>
             ))}
           </div>
-        </div>
+        </InViewSpring>
       </Container>
     </section>
   );

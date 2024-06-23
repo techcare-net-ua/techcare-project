@@ -3,7 +3,7 @@ type Size = {
   height: number;
 };
 
-const TechCarelogo = ({ width, height }: Size) => {
+const TechCareLogo = ({ width, height }: Size) => {
   return (
     <>
       <svg width={width} height={height} viewBox="0 0 990.43 198.04">
@@ -95,4 +95,4 @@ const TechCarelogo = ({ width, height }: Size) => {
   );
 };
 
-export default TechCarelogo;
+export default TechCareLogo;

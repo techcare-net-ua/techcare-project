@@ -30,7 +30,7 @@ export const ServicesSection = () => {
                   <div className="space-y-4">
                     <h3
                       className={cn(
-                        'from-background to-secondary px-2 py-1 font-medium uppercase tracking-wide md:text-xl lg:text-2xl',
+                        'from-background to-secondary px-2 py-1 font-medium tracking-wide md:text-xl lg:text-2xl',
                         index % 2 === 0
                           ? 'bg-gradient-to-r'
                           : 'bg-gradient-to-l',

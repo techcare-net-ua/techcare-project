@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import TechCarelogo from './TechCarelogo';
+import TechCareLogo from './TechCarelogo';
 
 type Size = {
   width?: number;
@@ -10,7 +10,7 @@ type Size = {
 export const Logo = ({ width = 170, height = 50 }: Size) => {
   return (
     <Link href="/">
-      <TechCarelogo width={width} height={height} />
+      <TechCareLogo width={width} height={height} />
     </Link>
   );
 };
