@@ -1,20 +1,30 @@
-import { Logo, Navigation } from '@/components';
-import { Button } from '@/ui/button';
+import Link from 'next/link';
 
+import { Logo, Navigation } from '@/components';
+import { Button } from '@/components/ui/button';
+
+import { MobileMenu } from '../MobileMenu';
 import { ThemeSwitcher } from '../ThemeSwitcher';
 
 export const Header = () => {
   return (
-    <header className="grid-in-header border border-b-border">
-      <div className="container flex gap-4 justify-between items-center py-2">
-        <Logo />
+    <>
+      <header className="fixed top-0 z-50 w-full border-b border-b-border bg-background/90  shadow-md backdrop-blur-sm grid-in-header">
+        <div className="container flex items-center justify-between gap-4 py-2">
+          <Logo />
 
-        <div className="flex gap-4 items-center">
-          <Navigation />
-          <Button size="default">Sign in</Button>
-          <ThemeSwitcher />
+          <div className="flex items-center gap-4">
+            <Navigation />
+            <MobileMenu />
+            <div className="hidden sm:block">
+              <ThemeSwitcher />
+            </div>
+            <Button size="default" asChild>
+              <Link href="/profile">Sign in</Link>
+            </Button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };

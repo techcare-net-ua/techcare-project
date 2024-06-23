@@ -1,27 +1,28 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 
-import { BaseLayout } from '@/components';
 import { cn } from '@/helpers';
 import { ProvidersLayout } from '@/providers';
-import { ChildrenProps } from '@/types';
+import { PropsChildren } from '@/types';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Raleway({
+  subsets: ['cyrillic', 'latin'],
+  weight: ['400', '500', '700'],
+  style: ['italic', 'normal'],
+});
 
 export const metadata: Metadata = {
   title: 'Techcare',
   description: 'Description...',
 };
 
-export default function RootLayout({ children }: ChildrenProps) {
+export default function RootLayout({ children }: PropsChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className)}>
-        <ProvidersLayout>
-          <BaseLayout>{children}</BaseLayout>
-        </ProvidersLayout>
+        <ProvidersLayout>{children}</ProvidersLayout>
       </body>
     </html>
   );

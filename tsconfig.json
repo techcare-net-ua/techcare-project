@@ -24,13 +24,16 @@
     "baseUrl": ".",
     "paths": {
       "@/components": ["src/components/index"],
-      "@/ui/*": ["src/components/ui/*"],
+      "@/components/*": ["src/components/*"],
+      "@/components/ui/*": ["src/components/ui/*"],
       "@/providers": ["src/providers/index"],
       "@/types": ["src/types/index"],
-      "@/styles": ["src/styles/*"],
+      "@/styles": ["src/styles/index"],
       "@/helpers": ["src/lib/helpers/index"],
       "@/services": ["src/lib/services/index"],
-      "@/hooks": ["src/lib/hooks/index"]
+      "@/configs": ["src/lib/configs/index"],
+      "@/hooks": ["src/lib/hooks/index"],
+      "@/images/*": ["public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
