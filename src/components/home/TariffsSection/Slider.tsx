@@ -22,7 +22,7 @@ export const Slider: FC<PropsChildren> = ({ children }) => {
     <>
       <Carousel
         setApi={setApi}
-        className="w-[calc(100vw_-_2rem)] sm:w-full"
+        className="w-screen sm:w-full"
         opts={{
           align: 'center',
           loop: true,

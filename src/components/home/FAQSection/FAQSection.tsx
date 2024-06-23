@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-import { Container, Separator } from '@/components';
+import { Container, InViewSpring, Separator } from '@/components';
 import {
   Accordion,
   AccordionContent,
@@ -37,24 +37,10 @@ export const FAQSection = () => {
       <Container className="space-y-0 pb-8 pt-8">
         <h2 className="pb-4 text-center lg:pb-8">{content.title}:</h2>
         <Separator />
-        <div className="pt-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:pt-8">
-          <div>
-            {firstHalf.map(({ id, title, description }) => (
-              <Accordion key={id} type="single" collapsible className="w-full">
-                <AccordionItem className="mb-3 border" value={id}>
-                  <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
-                    {title}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4">
-                    {description}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </div>
-          <div>
-            {isLargeScreen &&
-              secondHalf.map(({ id, title, description }) => (
+        <InViewSpring>
+          <div className="pt-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:pt-8">
+            <div>
+              {firstHalf.map(({ id, title, description }) => (
                 <Accordion
                   key={id}
                   type="single"
@@ -63,7 +49,7 @@ export const FAQSection = () => {
                 >
                   <AccordionItem className="mb-3 border" value={id}>
                     <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
-                      <span>{title}</span>
+                      {title}
                     </AccordionTrigger>
                     <AccordionContent className="px-4">
                       {description}
@@ -71,8 +57,29 @@ export const FAQSection = () => {
                   </AccordionItem>
                 </Accordion>
               ))}
+            </div>
+            <div>
+              {isLargeScreen &&
+                secondHalf.map(({ id, title, description }) => (
+                  <Accordion
+                    key={id}
+                    type="single"
+                    collapsible
+                    className="w-full"
+                  >
+                    <AccordionItem className="mb-3 border" value={id}>
+                      <AccordionTrigger className="min-h-[100px] gap-2 px-4 text-left hover:text-primary [&[data-state=open]>span]:text-primary [&[data-state=open]>svg]:stroke-primary">
+                        <span>{title}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-4">
+                        {description}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+            </div>
           </div>
-        </div>
+        </InViewSpring>
       </Container>
     </section>
   );
