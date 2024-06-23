@@ -18,7 +18,7 @@ export const ROUTES = {
 };
 
 export const navRoutes: NavRoute[] = [
-  // { id: 'home', href: '/', title: 'Home' },
+  { id: 'home', href: '/', title: 'Home', startScreen: Screens.MD },
   {
     id: ROUTES.ABOUT_US.SEGMENT,
     href: ROUTES.ABOUT_US.PATH,

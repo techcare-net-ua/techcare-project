@@ -10,7 +10,7 @@ import { content } from './content';
 
 export const ServicesSection = () => {
   return (
-    <section>
+    <section id="ServicesSection">
       <Container pxDisable className="relative space-y-8 pb-8 pt-8 text-center">
         <h2>{content.title}</h2>
         <Separator />
