@@ -24,8 +24,8 @@ export const Hero: React.FC = () => {
           priority={true}
           className="h-full w-screen  object-cover"
         />
-        <div className="absolute left-0 top-0 hidden h-20 w-screen bg-gradient-to-b from-background to-transparent dark:block"></div>
-        <div className="absolute bottom-0 left-0 hidden h-20 w-screen bg-gradient-to-t from-background to-transparent dark:block"></div>
+        <div className="absolute left-0 top-0 hidden h-20 w-full  bg-gradient-to-b from-background to-transparent dark:block"></div>
+        <div className="absolute bottom-0 left-0 hidden h-20 w-full bg-gradient-to-t from-background to-transparent dark:block"></div>
       </div>
       <Container
         className="flex animate-show-up flex-col items-center pb-5 pt-20 md:flex-row md:pt-28 xl:justify-between xl:px-16 xl:pt-32
