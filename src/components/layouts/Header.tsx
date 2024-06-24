@@ -9,7 +9,7 @@ import { ThemeSwitcher } from '../ThemeSwitcher';
 export const Header = () => {
   return (
     <>
-      <header className="border-b border-b-border grid-in-header">
+      <header className="border-b border-b-border grid-in-header" id='top'>
         <div className="container flex items-center justify-between gap-4 py-2">
           <Logo />
 
