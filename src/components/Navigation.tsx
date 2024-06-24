@@ -36,7 +36,7 @@ export const Navigation = () => {
                 <nav.NavigationMenuLink
                   className={clsx(
                     nav.navigationMenuTriggerStyle(),
-                    'capitalize after:opacity-0 after:transition-opacity',
+                    'bg-transparent capitalize after:opacity-0 after:transition-opacity',
                     isActive &&
                       "relative text-primary after:absolute after:bottom-0 after:h-[0.125rem] after:w-full after:rounded after:bg-foreground after:opacity-100 after:content-[''] focus:bg-transparent focus:text-primary",
                   )}

@@ -3,6 +3,7 @@
 export * from './AccordionDemo';
 export * from './ButtonToTop';
 export * from './Container';
+export * from './FormForEmail';
 export * from './InViewSpring';
 export * from './layouts';
 export * from './Logo';

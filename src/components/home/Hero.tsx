@@ -15,8 +15,8 @@ import { Input } from '@/components/ui/input';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[700px]">
-      <div className=" absolute left-0 top-0 h-full ">
+    <section className="relative min-h-[700px]" id='top'>
+      <div className="absolute left-0 top-0 h-full ">
         <Image
           src={heroImage}
           alt="image background"
@@ -24,11 +24,11 @@ export const Hero: React.FC = () => {
           priority={true}
           className="h-full w-screen  object-cover"
         />
-        <div className="absolute left-0 top-0 hidden h-20 w-screen bg-gradient-to-b from-background to-transparent dark:block"></div>
-        <div className="absolute bottom-0 left-0 hidden h-20 w-screen bg-gradient-to-t from-background to-transparent dark:block"></div>
+        <div className="absolute left-0 top-0 hidden h-20 w-full  bg-gradient-to-b from-background to-transparent dark:block"></div>
+        <div className="absolute bottom-0 left-0 hidden h-20 w-full bg-gradient-to-t from-background to-transparent dark:block"></div>
       </div>
       <Container
-        className="flex animate-show-up flex-col items-center pb-5 pt-20 md:flex-row md:pt-28 xl:justify-between xl:px-16 xl:pt-32
+        className="flex animate-show-up flex-col items-center pb-5 pt-36 md:flex-row md:pt-44 xl:justify-between xl:px-16 xl:pt-48
       "
       >
         <div className="space-y-10 pb-10 md:space-y-16 md:pr-4 xl:w-[800px]">

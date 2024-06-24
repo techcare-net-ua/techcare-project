@@ -1,6 +1,6 @@
 import DOMPurify from 'isomorphic-dompurify';
 
-import { Container, Separator } from '@/components';
+import { Container, InViewSpring, Separator } from '@/components';
 
 import { content } from './content';
 
@@ -9,7 +9,7 @@ const convertToB = (text: string): string =>
 
 export const AdvantagesSection = () => {
   return (
-    <section>
+    <section id="AdvantagesSection">
       <Container className="relative space-y-8 pb-8 pt-8">
         <h2
           dangerouslySetInnerHTML={{
@@ -19,7 +19,7 @@ export const AdvantagesSection = () => {
         />
         <Separator />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <InViewSpring className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {content.base.map(({ id, description, title }) => (
             <div
               key={id}
@@ -29,8 +29,8 @@ export const AdvantagesSection = () => {
               <p className="[] mt-2">{description}</p>
             </div>
           ))}
-        </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
+        </InViewSpring>
+        <InViewSpring className="grid grid-cols-1 gap-6 md:grid-cols-4">
           {content.drops.map(({ id, description, icon: Icon }) => (
             <div
               key={id}
@@ -49,7 +49,7 @@ export const AdvantagesSection = () => {
               />
             </div>
           ))}
-        </div>
+        </InViewSpring>
       </Container>
     </section>
   );
