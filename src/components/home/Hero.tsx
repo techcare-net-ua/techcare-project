@@ -15,7 +15,7 @@ import { Input } from '@/components/ui/input';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[700px]">
+    <section className="relative min-h-[700px]" id='top'>
       <div className="absolute left-0 top-0 h-full ">
         <Image
           src={heroImage}
