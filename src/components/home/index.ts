@@ -1,5 +1,5 @@
 export * from './AdvantagesSection';
 export * from './FAQSection';
-export * from './Hero';
+export * from './HeroSection/Hero';
 export * from './ServicesSection';
 export * from './TariffsSection';
