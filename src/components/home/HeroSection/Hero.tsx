@@ -1,6 +1,5 @@
-import Image from 'next/image';
-
 import { Container } from '@/components';
+import { StrapiImage } from '@/components';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -36,16 +35,13 @@ interface HeroSectionProps {
 }
 
 export const Hero = ({ data }: Readonly<HeroSectionProps>) => {
-  console.dir(data, { depth: null });
   const { heading, subHeading, image, form } = data;
-  const imageURL = 'http://localhost:1337' + image.url;
-  console.log(imageURL);
 
   return (
     <section className="relative min-h-[700px]">
       <div className="absolute left-0 top-0 h-full ">
-        <Image
-          src={imageURL}
+        <StrapiImage
+          src={image.url}
           width={700}
           height={2000}
           alt="image background"

@@ -9,5 +9,6 @@ export * from './Logo';
 export * from './Navigation';
 export * from './Separator';
 export * from './SpringExample';
+export * from './StrapiImage';
 export * from './ThemeSwitcher';
 export * from './YearLabel';
