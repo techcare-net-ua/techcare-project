@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-import { flattenAttributes } from '@/helpers';
+import { flattenAttributes, getStrapiURL } from '@/helpers';
 
-axios.defaults.baseURL = 'http://localhost:1337';
+axios.defaults.baseURL = getStrapiURL();
 
 export const getStrapiData = async (path: string) => {
   try {
@@ -16,6 +16,12 @@ export const getStrapiData = async (path: string) => {
               },
               form: {
                 populate: ['heading', 'text'],
+              },
+              feature: {
+                populate: ['heading', 'text'],
+              },
+              featureDetails: {
+                populate: ['heading', 'icon'],
               },
             },
           },

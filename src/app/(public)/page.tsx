@@ -1,5 +1,7 @@
 // Home Page
 
+import { getHomePageData } from 'src/data/getHomePageData';
+
 import {
   AdvantagesSection,
   FAQSection,
@@ -7,16 +9,27 @@ import {
   ServicesSection,
   TariffsSection,
 } from '@/components/home';
-import { getStrapiData } from '@/components/home/HeroSection/data';
 
 export default async function Page() {
-  const strapiData = await getStrapiData('/api/home-page');
+  const blockRenderer = (block: any) => {
+    switch (block.__component) {
+      case 'layout.hero-section':
+        return <Hero key={block.id} data={block} />;
+      case 'layout.advantages-section':
+        return <AdvantagesSection key={block.id} data={block} />;
+      default:
+        return null;
+    }
+  };
+
+  const strapiData = await getHomePageData();
 
   const { blocks } = strapiData;
+  if (!blocks) return <div>No blocks found</div>;
+
   return (
     <>
-      <Hero data={blocks[0]} />
-      <AdvantagesSection />
+      {blocks.map((block: any) => blockRenderer(block))}
       <ServicesSection />
       <TariffsSection />
       <FAQSection />

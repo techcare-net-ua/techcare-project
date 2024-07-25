@@ -11,28 +11,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 
-interface ImageProps {
-  id: number;
-  url: string;
-  alternativeText: string;
-}
-
-interface FormProps {
-  id: number;
-  heading: string;
-  text: string;
-}
-
-interface HeroSectionProps {
-  data: {
-    id: number;
-    __component: string;
-    heading: string;
-    subHeading: string;
-    image: ImageProps;
-    form: FormProps;
-  };
-}
+import { HeroSectionProps } from './HeroSectionProps';
 
 export const Hero = ({ data }: Readonly<HeroSectionProps>) => {
   const { heading, subHeading, image, form } = data;
