@@ -25,3 +25,13 @@ export const getHomePageData = async () => {
 
   return await fetchData(url, searchParams);
 };
+
+export const getHomePageMetadata = async () => {
+  const url = '/api/home-page';
+
+  const searchParams = {
+    populate: { fields: ['title', 'description'] },
+  };
+
+  return fetchData(url, searchParams);
+};

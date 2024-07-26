@@ -1,6 +1,7 @@
 // Home Page
 
-import { getHomePageData } from 'src/data/getHomePageData';
+import { Metadata } from 'next';
+import { getHomePageData, getHomePageMetadata } from 'src/data/getHomePageData';
 
 import {
   AdvantagesSection,
@@ -9,6 +10,15 @@ import {
   ServicesSection,
   TariffsSection,
 } from '@/components/home';
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  const metadata = await getHomePageMetadata();
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+  };
+};
 
 export default async function Page() {
   const blockRenderer = (block: any) => {
