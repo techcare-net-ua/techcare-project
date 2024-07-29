@@ -17,7 +17,7 @@ export const Hero = ({ data }: Readonly<HeroSectionProps>) => {
   const { heading, subHeading, image, form } = data;
 
   return (
-    <section className="relative min-h-[700px]">
+    <section className="relative min-h-[700px]" id='top'>
       <div className="absolute left-0 top-0 h-full ">
         <StrapiImage
           src={image.url}

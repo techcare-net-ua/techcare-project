@@ -1,4 +1,4 @@
-import { Footer, Header } from '@/components';
+import { ButtonToTop,Footer, Header } from '@/components';
 import { PropsChildren } from '@/types';
 
 export default function Layout({ children }: PropsChildren) {
@@ -7,6 +7,7 @@ export default function Layout({ children }: PropsChildren) {
       <Header />
       <main className="grid-in-main">{children}</main>
       <Footer />
+      <ButtonToTop />
     </div>
   );
 }
