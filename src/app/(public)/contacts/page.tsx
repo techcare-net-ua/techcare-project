@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { Container } from '@/components';
+import { HeroSection } from '@/components/contacts';
 
 export const metadata: Metadata = {
   title: 'Contacts',
@@ -8,11 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUsPage() {
-  return (
-    <section>
-      <Container>
-        <h1>Contacts page</h1>
-      </Container>
-    </section>
-  );
+  return <HeroSection />;
 }
