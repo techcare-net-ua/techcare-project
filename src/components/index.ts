@@ -10,6 +10,8 @@ export * from './Logo';
 export * from './Navigation';
 export * from './Separator';
 export * from './SpringExample';
+export * from './StrapiErrors';
 export * from './StrapiImage';
 export * from './ThemeSwitcher';
 export * from './YearLabel';
+export * from './ZodErrors';
