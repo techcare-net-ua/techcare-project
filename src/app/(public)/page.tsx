@@ -35,7 +35,7 @@ export default async function Page() {
   const strapiData = await getHomePageData();
 
   const { blocks } = strapiData;
-  if (!blocks) return <div>No blocks found</div>;
+  if (!blocks) return <div>Блоків не знайдено</div>;
 
   return (
     <>

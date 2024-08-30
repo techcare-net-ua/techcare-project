@@ -50,7 +50,6 @@ export const loginUserService = async (userData: LoginUserProps) => {
 
     return response.data;
   } catch (error) {
-    console.error('Login Service Error:', error);
-    throw error;
+    return { error };
   }
 };

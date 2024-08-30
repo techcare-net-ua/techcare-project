@@ -17,10 +17,10 @@ export default function Error({
       <div className="space-y-4">
         <BugIcon className="h-24 w-24 text-pink-500 dark:text-pink-400" />
         <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100">
-          Oops! Something went wrong.
+          Ой! Щось пішло не так.
         </h1>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          This is an error page. Please try again later.
+          Це сторінка помилки. Спробуйте пізніше.
         </p>
         <p className="italic text-pink-800">{error.message}</p>
       </div>

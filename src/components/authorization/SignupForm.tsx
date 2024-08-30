@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { useFormState } from 'react-dom';
 import Link from 'next/link';
 import { registerUserAction } from 'src/data/actions/auth-actions';
@@ -14,8 +15,10 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { useToast } from '@/components/ui/use-toast';
 
 import { StrapiErrors } from '../StrapiErrors';
+import { SubmitButton } from '../SubmitButton';
 import { ZodErrors } from '../ZodErrors';
 
 const INITIAL_STATE = {
@@ -25,12 +28,21 @@ const INITIAL_STATE = {
 };
 
 export const SignupForm = () => {
+  const { toast } = useToast();
   const [formState, formAction] = useFormState(
     registerUserAction,
     INITIAL_STATE,
   );
 
-  console.log(formState);
+  useEffect(() => {
+    if (formState?.message) {
+      toast({
+        variant: 'destructive',
+        description: formState.message,
+        duration: 10000,
+      });
+    }
+  }, [formState.message, toast]);
 
   return (
     <div className="w-full max-w-md">
@@ -77,10 +89,12 @@ export const SignupForm = () => {
               <ZodErrors error={formState?.zodErrors?.password} />
             </div>
           </CardContent>
-          <CardFooter className="flex flex-col gap-[4px]">
-            <button type="submit" className="w-full">
-              Зареєструватися
-            </button>
+          <CardFooter className="flex flex-col gap-[8px]">
+            <SubmitButton
+              loadingText={'Завантаження...'}
+              text={'Зареєструватися'}
+              className={'w-full'}
+            />
             <StrapiErrors error={formState?.strapiErrors} />
           </CardFooter>
         </Card>
