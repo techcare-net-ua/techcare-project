@@ -13,7 +13,7 @@ import { schemaLogin, schemaRegister } from './schemaZod';
 const config = {
   maxAge: 60 * 60 * 24 * 7,
   path: '/',
-  domain: process.env.HOST ?? 'localhost',
+  domain: process.env.HOST_NAME ?? 'localhost',
   httpOnly: true,
   secure: process.env.NODE_ENV === 'production',
 };
@@ -56,7 +56,7 @@ export const registerUserAction = async (
   }
 
   cookies().set('jwt', responseData.jwt, config);
-  redirect('/my-services');
+  redirect('/dashboard');
 };
 
 export const loginUserAction = async (prevState: any, formData: FormData) => {
@@ -94,7 +94,7 @@ export const loginUserAction = async (prevState: any, formData: FormData) => {
   }
 
   cookies().set('jwt', responseData.jwt, config);
-  redirect('/my-services');
+  redirect('/dashboard');
 };
 
 export const logoutAction = async () => {
