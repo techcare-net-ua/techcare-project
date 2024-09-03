@@ -44,6 +44,7 @@ export function SigninForm() {
 
   return (
     <div className="w-full max-w-md">
+      <h1 className="sr-only">Signin Page</h1>
       <form action={formAction}>
         <Card>
           <CardHeader className="space-y-1">

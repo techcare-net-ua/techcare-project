@@ -46,6 +46,7 @@ export const SignupForm = () => {
 
   return (
     <div className="w-full max-w-md">
+      <h1 className="sr-only">Signup Page</h1>
       <form action={formAction}>
         <Card>
           <CardHeader className="space-y-1">
