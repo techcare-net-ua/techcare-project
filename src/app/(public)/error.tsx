@@ -19,10 +19,10 @@ export default function Error({
         <div className="space-y-4">
           <Image
             priority
-            src="/icon/errors-img.jpg"
+            src="/icon/errors_page.png"
             alt="Icon errors"
-            height={300}
-            width={300}
+            height={400}
+            width={400}
             className="m-auto"
           />
           <h1 className="text-2xl font-bold sm:text-4xl">
