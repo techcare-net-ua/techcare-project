@@ -22,7 +22,7 @@ export const Header = () => {
               <ThemeSwitcher />
             </div>
             <Button size="default" asChild>
-              <Link href="/profile">Sign in</Link>
+              <Link href="/signin">Sign in</Link>
             </Button>
           </div>
         </div>

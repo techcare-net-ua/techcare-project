@@ -1,5 +1,8 @@
 // Home Page
 
+import { Metadata } from 'next';
+import { getHomePageData, getHomePageMetadata } from 'src/data/getHomePageData';
+
 import {
   AdvantagesSection,
   FAQSection,
@@ -8,11 +11,35 @@ import {
   TariffsSection,
 } from '@/components/home';
 
-export default function Page() {
+export const generateMetadata = async (): Promise<Metadata> => {
+  const metadata = await getHomePageMetadata();
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+  };
+};
+
+export default async function Page() {
+  const blockRenderer = (block: any) => {
+    switch (block.__component) {
+      case 'layout.hero-section':
+        return <Hero key={block.id} data={block} />;
+      case 'layout.advantages-section':
+        return <AdvantagesSection key={block.id} data={block} />;
+      default:
+        return null;
+    }
+  };
+
+  const strapiData = await getHomePageData();
+
+  const { blocks } = strapiData;
+  if (!blocks) return <div>Блоків не знайдено</div>;
+
   return (
     <>
-      <Hero />
-      <AdvantagesSection />
+      {blocks.map((block: any) => blockRenderer(block))}
       <ServicesSection />
       <TariffsSection />
       <FAQSection />
