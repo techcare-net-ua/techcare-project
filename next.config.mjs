@@ -18,6 +18,12 @@ const nextConfig = {
         hostname: process.env.HOST_NAME,
         pathname: '/uploads/**/*',
       },
+      // {
+      //   protocol: 'http',
+      //   hostname: 'localhost',
+      //   pathname: '/uploads/**/*',
+      //   port: '1337',
+      // },
 
       {
         protocol: 'https',
