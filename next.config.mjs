@@ -13,17 +13,17 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      // {
-      //   protocol: 'https',
-      //   hostname: process.env.HOST_NAME,
-      //   pathname: '/uploads/**/*',
-      // },
       {
-        protocol: 'http',
-        hostname: 'localhost',
+        protocol: 'https',
+        hostname: process.env.HOST_NAME,
         pathname: '/uploads/**/*',
-        port: '1337',
       },
+      // {
+      //   protocol: 'http',
+      //   hostname: 'localhost',
+      //   pathname: '/uploads/**/*',
+      //   port: '1337',
+      // },
 
       {
         protocol: 'https',

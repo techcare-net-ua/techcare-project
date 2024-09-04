@@ -2,7 +2,7 @@ import DOMPurify from 'isomorphic-dompurify';
 
 import { Container, InViewSpring, Separator } from '@/components';
 
-import { AdvantagesSectionProps, IconMap } from './content';
+import { AdvantagesSectionProps, IconMap } from './type';
 
 const convertToB = (text: string): string =>
   text.replace(/\/\/\/(.*?)\/\/\//, '<b>$1</b>');

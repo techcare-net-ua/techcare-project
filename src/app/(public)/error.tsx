@@ -25,7 +25,7 @@ export default function Error({
             width={300}
             className="m-auto"
           />
-          <h1 className="text-2xl font-bold sm:text-4xl ">
+          <h1 className="text-2xl font-bold sm:text-4xl">
             Ой! Щось пішло не так.
           </h1>
           <p className=" text-sm sm:text-lg">
