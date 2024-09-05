@@ -1,7 +1,5 @@
-import Image from 'next/image';
-import heroImage from 'public/hero.jpg';
-
 import { Container } from '@/components';
+import { StrapiImage } from '@/components';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -13,12 +11,18 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 
-export const Hero: React.FC = () => {
+import { HeroSectionProps } from './HeroSectionProps';
+
+export const Hero = ({ data }: Readonly<HeroSectionProps>) => {
+  const { heading, subHeading, image, form } = data;
+
   return (
     <section className="relative min-h-[700px]" id='top'>
       <div className="absolute left-0 top-0 h-full ">
-        <Image
-          src={heroImage}
+        <StrapiImage
+          src={image.url}
+          width={700}
+          height={2000}
           alt="image background"
           quality={100}
           priority={true}
@@ -36,24 +40,20 @@ export const Hero: React.FC = () => {
             className="text-center text-primary-foreground opacity-90 drop-shadow-3xl md:text-left 
           md:text-5xl xl:text-left xl:text-7xl xl:font-bold dark:text-foreground"
           >
-            Techcare - надійний провідник у світ інформаційних технологій
+            {heading}
           </h1>
           <p
             className="mx-auto max-w-[400px] text-primary-foreground md:mx-0 lg:w-full xl:w-full xl:text-xl 
           dark:text-foreground"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-            consequatur ea veritatis consectetur expedita reiciendis fugiat
-            culpa tempora dolores voluptatem.
+            {subHeading}
           </p>
         </div>
         <Card className="mt-0 max-w-[400px] rounded-lg opacity-80 md:max-w-[400px]  xl:w-[500px]">
           <CardHeader className="xl:space-y-3">
-            <CardTitle className="xl:text-3xl">
-              Потрібна допомога системного адміністратора?
-            </CardTitle>
+            <CardTitle className="xl:text-3xl">{form.heading}</CardTitle>
             <CardDescription className="xl:text-lg">
-              Залиште номер - ми зателефонуємо.
+              {form.text}
             </CardDescription>
           </CardHeader>
           <CardContent>

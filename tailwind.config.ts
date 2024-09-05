@@ -54,6 +54,10 @@ const config: Config = {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
         },
+        errors: {
+          DEFAULT: 'hsl(var(--errors-foreground))',
+          foreground: 'hsl(var(--errors-foreground))',
+        },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',

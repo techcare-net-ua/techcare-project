@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
 
+import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/helpers';
 import { ProvidersLayout } from '@/providers';
 import { PropsChildren } from '@/types';
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: PropsChildren) {
     <html lang="en" suppressHydrationWarning>
       <body className={cn(inter.className)}>
         <ProvidersLayout>{children}</ProvidersLayout>
+        <Toaster />
       </body>
     </html>
   );

@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,19 +27,49 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/components": ["src/components/index"],
-      "@/components/*": ["src/components/*"],
-      "@/components/ui/*": ["src/components/ui/*"],
-      "@/providers": ["src/providers/index"],
-      "@/types": ["src/types/index"],
-      "@/styles": ["src/styles/index"],
-      "@/helpers": ["src/lib/helpers/index"],
-      "@/services": ["src/lib/services/index"],
-      "@/configs": ["src/lib/configs/index"],
-      "@/hooks": ["src/lib/hooks/index"],
-      "@/images/*": ["public/*"]
+      "@/components": [
+        "src/components/index"
+      ],
+      "@/components/*": [
+        "src/components/*"
+      ],
+      "@/components/ui/*": [
+        "src/components/ui/*"
+      ],
+      "@/providers": [
+        "src/providers/index"
+      ],
+      "@/types": [
+        "src/types/index"
+      ],
+      "@/styles": [
+        "src/styles/index"
+      ],
+      "@/helpers": [
+        "src/lib/helpers/index"
+      ],
+      "@/services": [
+        "src/lib/services/index"
+      ],
+      "@/configs": [
+        "src/lib/configs/index"
+      ],
+      "@/hooks": [
+        "src/lib/hooks/index"
+      ],
+      "@/images/*": [
+        "public/*"
+      ]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

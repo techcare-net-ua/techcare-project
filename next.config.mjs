@@ -11,6 +11,26 @@ const nextConfig = {
       // Wildcard path matching
     ];
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: process.env.HOST_NAME,
+        pathname: '/uploads/**/*',
+      },
+      // {
+      //   protocol: 'http',
+      //   hostname: 'localhost',
+      //   pathname: '/uploads/**/*',
+      //   port: '1337',
+      // },
+
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
