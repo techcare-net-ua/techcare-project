@@ -59,7 +59,7 @@ export const FeedbackSection = () => {
   return (
     <section>
       <Container>
-        <Card className="mx-auto rounded-lg opacity-80 max-w-6xl">
+        <Card className="mx-auto rounded-lg opacity-80 max-w-4xl">
           <CardContent className="p-6">
             <Form {...form}>
               <form
@@ -145,7 +145,7 @@ export const FeedbackSection = () => {
                   )}
                 />
 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-auto">
                   Надіслати
                 </Button>
               </form>
