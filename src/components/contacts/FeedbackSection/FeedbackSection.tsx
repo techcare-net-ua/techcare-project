@@ -59,14 +59,14 @@ export const FeedbackSection = () => {
   return (
     <section>
       <Container>
-        <Card className="mx-auto rounded-lg opacity-80 max-w-4xl">
+        <Card className="mx-auto max-w-4xl rounded-lg opacity-80">
           <CardContent className="p-6">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="grid gap-8"
               >
-                <div className='grid gap-8 md:grid-cols-2'>
+                <div className="grid gap-8 md:grid-cols-2">
                   <FormField
                     control={form.control}
                     name="fullname"
@@ -145,7 +145,7 @@ export const FeedbackSection = () => {
                   )}
                 />
 
-                <Button type="submit" className="w-auto">
+                <Button type="submit" className="md:place-self-end">
                   Надіслати
                 </Button>
               </form>
